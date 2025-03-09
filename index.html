@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-km="ZUKA CAMBO" data-en="ZUKA CAMBO">ZUKA CAMBO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="logo1.jpg" alt="Logo">
+        <div>
+            <h1 data-km="ZUKA CAMBO" data-en="ZUKA CAMBO">ZUKA CAMBO</h1>
+            <p data-km="ជ្រើសរើសហ្គេមដែលអ្នកចូលចិត្ត" data-en="Choose your favorite games">ជ្រើសរើសហ្គេមដែលអ្នកចូលចិត្ត</p>
+        </div>
+        <select id="languageSwitch" onchange="changeLanguage()">
+            <option value="km">ខ្មែរ</option>
+            <option value="en">English</option>
+        </select>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" data-km-placeholder="ស្វែងរកហ្គេម..." data-en-placeholder="Search games..." placeholder="ស្វែងរកហ្គេម...">
+    </div>
+      
+    <div class="game-container" id="gameContainer">
+        <div class="game-card">
+            <img src="buy.jpg" alt="Game 1">
+            <h3 data-km="Mobile Legends" data-en="Mobile Legends">Mobile Legends</h3>
+            <p data-km="តម្លៃ: $4.00" data-en="Price: $4.00">តម្លៃ: $4.00</p>
+            <p data-km="កូដ: mlbb01" data-en="Code: mlbb01">កូដ: mlbb01</p>
+            <button class="buy-btn" data-km="បន្ថែមទៅកន្ត្រក🛒" data-en="Add to Cart🛒">បន្ថែមទៅកន្ត្រក🛒</button>          
+        </div>
+        
+        <div class="game-card">
+            <img src="buy1.jpg" alt="Game 2">
+            <h3 data-km="8 Ball" data-en="8 Ball">8 Ball</h3>
+            <p data-km="តម្លៃ: $3.00" data-en="Price: $3.00">តម្លៃ: $3.00</p>
+            <p data-km="កូដ: ball168" data-en="Code: ball168">កូដ: ball168</p>
+            <button class="buy-btn" data-km="បន្ថែមទៅកន្ត្រក🛒" data-en="Add to Cart🛒">បន្ថែមទៅកន្ត្រក🛒</button>
+        </div>
+        
+        <div class="game-card">
+            <img src="buy2.jpg" alt="Game 3">
+            <h3 data-km="Clas Of Clan" data-en="Clas Of Clan">Clas Of Clan</h3>
+            <p data-km="តម្លៃ: $3.00" data-en="Price: $3.00">តម្លៃ: $3.00</p>
+            <p data-km="កូដ: clas168" data-en="Code: clas168">កូដ: clas168</p>
+            <button class="buy-btn" data-km="បន្ថែមទៅកន្ត្រក🛒" data-en="Add to Cart🛒">បន្ថែមទៅកន្ត្រក🛒</button>
+        </div>
+        <div class="game-card">
+            <img src="buy3.jpg" alt="Game 4">
+            <h3 data-km="Capcut pro" data-en="Capcut Pro">Capcut Pro</h3>
+            <p data-km="តម្លៃ: $2.00" data-en="Price: $2.00">តម្លៃ: $2.00</p>
+            <p data-km="កូដ: capcut168" data-en="Code: capcut168">កូដ: capcut168</p>
+            <button class="buy-btn" data-km="បន្ថែមទៅកន្ត្រក🛒" data-en="Add to Cart🛒">បន្ថែមទៅកន្ត្រក🛒</button>
+        </div>
+        <div class="game-card">
+            <img src="buy4.jpg" alt="Game 5">
+            <h3 data-km="Netflix Premium" data-en="Netflix Premium">Netflix Premium</h3>
+            <p data-km="តម្លៃ: $5.00" data-en="Price: $5.00">តម្លៃ: $5.00</p>
+            <p data-km="កូដ: netflix168" data-en="Code: netglix168">កូដ: netflix168</p>
+            <button class="buy-btn" data-km="បន្ថែមទៅកន្ត្រក🛒" data-en="Add to Cart🛒">បន្ថែមទៅកន្ត្រក🛒</button>
+        </div>
+        <div class="game-card">
+            <img src="buy5.jpg" alt="Game 6">
+            <h3 data-km="Canva Pro" data-en="Canva Pro">Canv Pro</h3>
+            <p data-km="តម្លៃ: $3.50" data-en="Price: $3.50">តម្លៃ: $3.00</p>
+            <p data-km="កូដ: canva168" data-en="Code: canva168">កូដ: canva168</p>
+            <button class="buy-btn" data-km="បន្ថែមទៅកន្ត្រក🛒" data-en="Add to Cart🛒">បន្ថែមទៅកន្ត្រក🛒</button>
+        </div>
+        
+        <div class="game-card">
+            <img src="free.png" alt="free">
+            <h3 data-km="FREE" data-en="FREE">FREE</h3>
+            <p data-km="តម្លៃ: $0.00" data-en="Price: $0.00">តម្លៃ: $0.00</p>
+            <p data-km="កូដ: free" data-en="Code: free">កូដ: Free</p>
+            <button onclick="gotofree()" data-km="ឥតគិតថ្លៃ🛒" data-en="FREE🛒">FREE🛒</button>
+        </div>
+    </div>
+
+    <div class="cart" id="cart">
+        <h3 data-km="កន្ត្រកទំនិញ" data-en="Shopping Cart">កន្ត្រកទំនិញ</h3>
+        <div id="cartItems"></div>
+        <p data-km="សរុប: $" data-en="Total: $">សរុប: $<span id="cartTotal">0.00</span></p>
+        <button class="checkout-btn" data-km="បញ្ចប់ការទិញ" data-en="Checkout">បញ្ចប់ការទិញ</button>
+        
+      </div>
+    </div>
+    <script>
+    function gotofree(){
+      window.location.href = "free.html";
+    }
+  </script>
+    <script src="script.js"></script>
+</body>
+</html>
